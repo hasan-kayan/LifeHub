@@ -3,6 +3,6 @@ from . import views
 
 urlpatterns = [
     path('', views.home),
-    path('csv/', views.csv),
+    path('/csv', views.csv),
 
 ]

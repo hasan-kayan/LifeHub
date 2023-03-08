@@ -1,9 +1,13 @@
-{%oad static%}
+{% load static %}
 <!DOCTYPE html>
 <html>
   <head>
     <title class="title">Web Scraper</title>
-    <link rel="stylesheet" href="{%static 'scrap/style.css'%}">
+    <br>
+    <br>
+    <br>
+    <h1>Coding All Stars Second Task</h1>
+    <link rel="stylesheet" href="{% static 'scrap/style.css'%}">
     <script>
       $(document).ready(function() {
         $("#scrape-button").click(function() {
@@ -23,13 +27,13 @@
             <label class="">
               <input type="checkbox" name="checkbox1" value="checkbox1" class="form-check-input1"> 
             </label>
-            <label class="form-check-label1">Checkbox 1</label>
+            <label class="form-check-label1">real.discount.com</label>
           </div>
           <div class="form-check">
             <label class="form-check-label">
               <input type="checkbox" name="checkbox2" value="checkbox2" class="form-check-input2"> 
             </label>
-            <label class="form-check-label2">Checkbox 2</label>
+            <label class="form-check-label2">discudemy.com</label>
             </label>
           </div>
           <div class="form-check">
@@ -37,7 +41,7 @@
               <input type="checkbox" name="checkbox3" value="checkbox3" class="form-check-input3"> 
             </label>
           </label>
-          <label class="form-check-label3">Checkbox 3 </label>
+          <label class="form-check-label3">cuponscorpion.com </label>
           </div>
         </div>
         <div class="form-group">
@@ -62,14 +66,25 @@
             <option value="3">3</option>
           </select>
         </div>
-        <button type="button" id="scrape-button" class="btn-primary">
-
-  
-        </button>
-      <img src="/Rect-out.png" alt="" class="out-image">
-        <img src="/Rect-in.png" alt="" class="inner-image">
-        <label for="" class="scrape">Scrape</label>
+        <a href="https://example.com">
+          <button type="button" id="scrape-button" class="btn-primary"><h3>SCRAP</h3></button>
+        </a>
+        
+        
+      
+        
       </form>
     </div>
+    
   </body>
 </html>
+<style>
+  
+html { 
+  background: url("{% static 'img/bg.png' %}") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+</style>
