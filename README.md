@@ -1,5 +1,4 @@
-This Django App which Includes Web Scraping Tool 
+# Windows After Format Installations Program
 
-    At this project I tried to scrap a 3 websites to find free course cupons for Udemy. 
-    Scraping property addedas a tool in to "scrape" app. 
-    UI is based on simple HTML/CSS 
+This programm will be based on personal system needs installation. 
+Whenever I Format my PC, the only program I need to install is this program. 
