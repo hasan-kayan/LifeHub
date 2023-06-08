@@ -1,4 +1,3 @@
-# Windows After Format Installations Program
+# Python Projects 
 
-This programm will be based on personal system needs installation. 
-Whenever I Format my PC, the only program I need to install is this program. 
+Mixed Python based projects.
