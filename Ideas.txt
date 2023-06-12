@@ -1,2 +1,8 @@
 Create a program that take data by API doesn't even matter data type. 
 Insert Data to Database
+
+
+Klavye yazı yazma sistemi geliştir
+Dersler pratikler ve sınavlar ekle 
+
+on parmak metotlarını öğren
