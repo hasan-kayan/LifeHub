@@ -1,0 +1,2 @@
+Create a program that take data by API doesn't even matter data type. 
+Insert Data to Database
