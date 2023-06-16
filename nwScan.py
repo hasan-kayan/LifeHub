@@ -20,8 +20,4 @@ def scan_network(interface):
     for device in devices:
         print(f'IP: {device["ip"]}   MAC: {device["mac"]}')
 
-# Enter the network interface name (e.g., 'eth0', 'wlan0')
-interface = input('Enter the network interface name: ')
 
-# Call the scan_network function
-scan_network(interface)
