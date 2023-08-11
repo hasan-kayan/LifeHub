@@ -1,19 +1,24 @@
-import FreeCAD as App
-import Part
-import Arch
+import FreeCAD
 
-# Yeni bir belge oluştur
-doc = App.newDocument("MyDocument")
+# Create a new document
+doc = FreeCAD.new()
 
-# Duvarı oluştur
-wall = Arch.makeWall(length=5000, width=200, height=3000)
-doc.addObject("Arch", wall)
+# Get the "Arch" workbench
+wb = doc.getWorkbench("Arch")
 
-# Pencereyi oluştur
-window = Arch.makeWindow(baseobj=wall, width=800, height=1200, placement=App.Placement(App.Vector(2100, 0, 900), App.Rotation()))
-doc.addObject("Arch", window)
+# Select the wall where the window will be placed
+wall = wb.getObject("Wall")
 
-# Belgeyi kaydet
-doc.saveAs("/path/to/save/my_architecture.FCStd")
+# Create a window
+window = wb.addObject("Arch_Window")
 
-print("Duvar ve pencere oluşturuldu. Dosya kaydedildi.")
+# Set the window's dimensions and properties
+window.Width = 1000
+window.Height = 500
+window.Material = "Wood"
+
+# Add the window to the wall
+wall.addObject(window)
+
+# Update the document
+doc.recompute()
