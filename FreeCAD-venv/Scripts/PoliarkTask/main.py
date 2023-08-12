@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-import FreeCAD
+import FreeCAD, Draft, Arch
 import sys
 
 
