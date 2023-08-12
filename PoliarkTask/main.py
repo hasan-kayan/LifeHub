@@ -1,26 +1,15 @@
-from flask import Flask, render_template
-import FreeCAD as App
+import FreeCAD
+import Draft
 import Arch
 
-app = Flask(__name__)
+p1 = FreeCAD.Vector(0, 0, 0)
+p2 = FreeCAD.Vector(5000, 0, 0)
 
-@app.route('/')
-def index():
-    # Yeni bir belge oluştur
-    doc = App.newDocument("MyDocument")
+# Sadece Duvar Oluşturma Kısmı
+wall = Arch.makeWall(p1, p2)
+FreeCAD.ActiveDocument.recompute()
 
-    # Duvarı oluştur
-    wall = Arch.makeWall(length=5000, width=200, height=3000)
-    doc.addObject("Arch", wall)
-
-    # Pencereyi oluştur
-    window = Arch.makeWindow(baseobj=wall, width=800, height=1200, placement=App.Placement(App.Vector(2100, 0, 900), App.Rotation()))
-    doc.addObject("Arch", window)
-
-    # Belgeyi kaydet
-    doc.save("/path/to/save/my_architecture.FCStd")
-
-    return render_template('index.html')
-
-if __name__ == '__main__':
-    app.run()
+# Şimdi sadece Pencere Oluşturma Kısmı
+base_line = Draft.makeLine(p1, p2)
+window = Arch.makeWindow(base_line, width=1000, height=1500)
+FreeCAD.ActiveDocument.recompute()
