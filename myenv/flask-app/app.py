@@ -1,3 +1,4 @@
 from flask  import Flask
 
-app = Flask(__Authentication__)
+app = Flask("Authentication-Service")
+
