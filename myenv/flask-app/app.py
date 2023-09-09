@@ -23,3 +23,9 @@ def connect_to_mongodb_from_json(json_file):
     return db
 
 
+class user:
+    def __init__(self,username,email,password):
+        self.username= username
+        self.email= email
+        self.password = password
+        
