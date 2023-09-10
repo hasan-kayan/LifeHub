@@ -2,7 +2,8 @@ from flask  import Flask
 from pymongo import MongoClient
 import json
 from flask_bcrypt import Bcrypt
-app = Flask("Authentication-Service")
+
+app = Flask("Password_Keeper")
 
 # MongoDB Local connection 
 def connect_to_mongodb_from_json(json_file):
@@ -22,11 +23,7 @@ def connect_to_mongodb_from_json(json_file):
     return db,collection
 
 
-class user:
-    def __init__(self,username,email,password):
-        self.username= username
-        self.email= email
-        self.password = password
+
 
 
 

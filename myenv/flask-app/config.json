@@ -1,5 +1,5 @@
 {
-    "MONGO_URL": "mongodb://localhost:27017/appDB",
-    "collection": "user",
+    "MONGO_URL": "mongodb://localhost:27017/PassKeeper",
+    "collection": "passwords",
     "appSecretKey": "2f0ea08776c73f09afaff01b3400477bebd7f8f1902ef95bcc343607a25d8dc5"
 }
